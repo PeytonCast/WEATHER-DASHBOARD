@@ -1,0 +1,19 @@
+#inputbox {
+    float: left;
+    text-align: center;
+}
+input {
+    text-align: center;
+}
+.solid {
+    border-top: 1px solid #17a2b8; /* solid border */ 
+}
+#searched-weather {
+    
+    float: left;
+    padding: 1rem 10rem 4rem;
+    text-align: left;
+}
+#card1 {
+    float: right;
+}

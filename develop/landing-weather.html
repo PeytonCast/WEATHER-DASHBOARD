@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parsing JSON</title>
+    <link rel="stylesheet" type="text/css" href="weather.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+    ></script>
+  </head>
+  <body class="min-100-vh flex-column">
+    <header class="p-5 text-center text-white bg-info">
+      <h1>Weather Dashboard</h1>
+    </header>
+<main id="main">
+    <section id="inputbox" class="border border-info rounded m-2">
+        <input class='m-3 rounded p-2'type="text" id="city" placeholder="Enter your city"> <br />
+        <button class="m-2 p-2 bg-success border border-success text-white rounded" type="button" for="city">Get the weather!</button>
+    
+        <hr class="solid"> 
+    <div id="search-history" class="">
+        <button id="recent-search1" class="bg-info text-white border border-info rounded m-1 pr-4 pl-4">city</button> <br />
+        <button id="recent-search2" class="bg-info text-white border border-info rounded m-1 pr-4 pl-4">city</button> <br />
+        <button id="recent-search3" class="bg-info text-white border border-info rounded m-1 pr-4 pl-4">city</button><br />
+        <button id="recent-search4" class="bg-info text-white border border-info rounded m-1 pr-4 pl-4">city</button>
+    </div>
+   
+    </section>
+    <section id="searched-weather" class="border bg-secondary border-seccondary text-light rounded m-2 ml-0">
+        <h2 id="city-name" class="mb-0">Atlanta:&#9925;</h2> <h3 id="current day">Thursday, August 4, 2022</h3>
+        <h4 id="current-time" class="mb-0">2:30 am</h4>
+        <p id="the-weather" class="mb-0"> cloudy</p>
+        <p id="humdity" class="mb-0">humdity: 100%</p>
+        <p id="Temp" class="mb-0">tempature: 90 F</p>
+        <p id="wind" class="mb-0">wind: 5 mph</p>
+        <p id="UV" class="mb-0">UV index: 0.55%</p>
+    </section>
+    <div id="card1" class="border bg-secondary border-seccondary text-light rounded m-1 ml-0 p-2" >
+        <p class="mb-0">Thursday, August 4, 2022</p>
+        <p class="mb-0">cloudy</p>
+        <p class="mb-0">humdity: 100%</p>
+        <p class="mb-0">tempature: 90 F</p>
+        <p class="mb-0">wind: 5 mph</p>
+    </div>
+    <div id="card1" class="border bg-secondary border-seccondary text-light rounded m-1 ml-0 p-2" >
+        <p class="mb-0">Thursday, August 4, 2022</p>
+        <p class="mb-0">cloudy</p>
+        <p class="mb-0">humdity: 100%</p>
+        <p class="mb-0">tempature: 90 F</p>
+        <p class="mb-0">wind: 5 mph</p>
+    </div>
+    <div id="card1" class="border bg-secondary border-seccondary text-light rounded m-1 ml-0 p-2" >
+        <p class="mb-0">Thursday, August 4, 2022</p>
+        <p class="mb-0">cloudy</p>
+        <p class="mb-0">humdity: 100%</p>
+        <p class="mb-0">tempature: 90 F</p>
+        <p class="mb-0">wind: 5 mph</p>
+        
+    </div>
+    <div id="card1" class="border bg-secondary border-seccondary text-light rounded m-1 ml-0 p-2" >
+        <p class="mb-0">Thursday, August 4, 2022</p>
+        <p class="mb-0">cloudy</p>
+        <p class="mb-0">humdity: 100%</p>
+        <p class="mb-0">tempature: 90 F</p>
+        <p class="mb-0">wind: 5 mph</p>
+        
+    </div>
+    <br />
+    <div id="card1" class="border bg-secondary border-seccondary text-light rounded m-1 ml-0 p-2" >
+        <p class="mb-0">Thursday, August 4, 2022</p>
+        <p class="mb-0">cloudy</p>
+        <p class="mb-0">humdity: 100%</p>
+        <p class="mb-0">tempature: 90 F</p>
+        <p class="mb-0">wind: 5 mph</p>
+        
+    </div>
+
+</main>
+    
+    
+    <script src="weather-script.js"></script>
+  </body>
+</html>
