@@ -9,9 +9,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.min.js"
-    ></script>
+  
   </head>
   <body class="min-100-vh flex-column">
     <header class="p-5 text-center text-white bg-info">
@@ -19,26 +17,31 @@
     </header>
 <main id="main">
     <section id="inputbox" class="border border-info rounded m-2">
-        <input class='m-3 rounded p-2'type="text" id="city" placeholder="Enter your city"> <br />
-        <button class="m-2 p-2 bg-success border border-success text-white rounded" type="button" for="city">Get the weather!</button>
-    
+      
+      <div  class="search">
+        <input class='m-2 rounded p-2 search-box' type="text" id="AutoFill" placeholder="Enter your city">  <br />
+        <button type="submit" class="m-2 p-2 bg-success border border-success text-white rounded">Get the weather!</button>
+      </div>
+   
         <hr class="solid"> 
     <div id="search-history" class="">
-        <button id="recent-search1" class="bg-info text-white border border-info rounded m-1 pr-4 pl-4">city</button> <br />
+        <button id="recent-search1" class="bg-info text-white border border-info rounded m-1 pr-4 pl-4"></button> <br />
         <button id="recent-search2" class="bg-info text-white border border-info rounded m-1 pr-4 pl-4">city</button> <br />
         <button id="recent-search3" class="bg-info text-white border border-info rounded m-1 pr-4 pl-4">city</button><br />
         <button id="recent-search4" class="bg-info text-white border border-info rounded m-1 pr-4 pl-4">city</button>
     </div>
-   
-    </section>
+  </section>
+    
     <section id="searched-weather" class="border bg-secondary border-seccondary text-light rounded m-2 ml-0">
-        <h2 id="city-name" class="mb-0">Atlanta:&#9925;</h2> <h3 id="current day">Thursday, August 4, 2022</h3>
-        <h4 id="current-time" class="mb-0">2:30 am</h4>
-        <p id="the-weather" class="mb-0"> cloudy</p>
-        <p id="humdity" class="mb-0">humdity: 100%</p>
-        <p id="Temp" class="mb-0">tempature: 90 F</p>
-        <p id="wind" class="mb-0">wind: 5 mph</p>
-        <p id="UV" class="mb-0">UV index: 0.55%</p>
+        <h2 id="city-name" class="mb-0"></h2> <h3 id="current day"></h3>
+        <h4 id="current-time" class="mb-0"></h4>
+        <p id="discription" class="mb-0"></p>
+        <img src="" alt="" id="icon"/>
+        <p id="Temp" class="mb-0"></p>
+        <p id="humidity" class="mb-0"></p>
+        <p id="feels" class="mb-0"></p>
+        <p id="wind" class="mb-0"></p>
+       
     </section>
     <div id="card1" class="border bg-secondary border-seccondary text-light rounded m-1 ml-0 p-2" >
         <p class="mb-0">Thursday, August 4, 2022</p>
@@ -81,8 +84,10 @@
     </div>
 
 </main>
-    
-    
-    <script src="weather-script.js"></script>
+   
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="weather-script.js" defer></script>
   </body>
 </html>
