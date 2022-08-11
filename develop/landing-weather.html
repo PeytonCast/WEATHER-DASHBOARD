@@ -17,18 +17,18 @@
     </header>
 <main id="main">
     <section id="inputbox" class="border border-info rounded m-2">
-      
+      <!--search input-->
       <div  class="search">
         <input class='m-2 rounded p-2 search-box' type="text" id="search"  placeholder="Enter your city">  <br />
         <button id="eventBTN" type="submit" class="m-2 p-2 bg-success border border-success text-white rounded">Get the weather!</button>
       </div>
-   
+       <!--search history-->
         <hr class="solid"> 
     <div id="search-history" class="">
-      
+      <button id="refresh" type="submit" class="m-2 p-1 bg-success border border-success text-white rounded">refresh</button>
     </div>
   </section>
-    
+        <!--current weather-->
     <section id="searched-weather" class="border bg-secondary border-seccondary text-light rounded m-2 ml-0">
         <h2 id="city-name" class="mb-0"></h2>
         <p id="discription" class="mb-0"></p>
@@ -39,50 +39,53 @@
         <p id="wind" class="mb-0"></p>
        
     </section>
-    <div id="card1" class="border bg-secondary border-seccondary text-light rounded m-1 ml-0 p-2" >
-        <p class="mb-0">Thursday, August 4, 2022</p>
-        <p class="mb-0">cloudy</p>
-        <p class="mb-0">humdity: 100%</p>
-        <p class="mb-0">tempature: 90 F</p>
-        <p class="mb-0">wind: 5 mph</p>
+    <!--forcast for day5-->
+<div id="5" class="card border bg-secondary border-seccondary text-light rounded m-2 ml-0">
+  <p id="date5">5</p>
+  <img src="" alt="" id="icon5Img"/>
+  <p id="temp5Max" class="mb-0"></p>
+  <p id="humidity5Level" class="mb-0"></p>
+  <p id="wind5Max" class="mb-0"></p>
+  </div> 
+     <!--forcast for day4-->
+  <div id="4" class="card border bg-secondary border-seccondary text-light rounded m-2 ml-0">
+    <p id="date4">4</p>
+    <img src="" alt="" id="icon4Img"/>
+    <p id="temp4Max" class="mb-0"></p>
+    <p id="humidity4Level" class="mb-0"></p>
+    <p id="wind4Max" class="mb-0"></p>
+  </div>
+  <!--forcast for day3-->
+  <div id="3" class="card border bg-secondary border-seccondary text-light rounded m-2 ml-0">
+    <p id="date3">3</p>
+    <img src="" alt="" id="icon3Img"/>
+    <p id="temp3Max" class="mb-0"></p>
+    <p id="humidity3Level" class="mb-0"></p>
+    <p id="wind3Max" class="mb-0"></p>
     </div>
-    <div id="card1" class="border bg-secondary border-seccondary text-light rounded m-1 ml-0 p-2" >
-        <p class="mb-0">Thursday, August 4, 2022</p>
-        <p class="mb-0">cloudy</p>
-        <p class="mb-0">humdity: 100%</p>
-        <p class="mb-0">tempature: 90 F</p>
-        <p class="mb-0">wind: 5 mph</p>
-    </div>
-    <div id="card1" class="border bg-secondary border-seccondary text-light rounded m-1 ml-0 p-2" >
-        <p class="mb-0">Thursday, August 4, 2022</p>
-        <p class="mb-0">cloudy</p>
-        <p class="mb-0">humdity: 100%</p>
-        <p class="mb-0">tempature: 90 F</p>
-        <p class="mb-0">wind: 5 mph</p>
-        
-    </div>
-    <div id="card1" class="border bg-secondary border-seccondary text-light rounded m-1 ml-0 p-2" >
-        <p class="mb-0">Thursday, August 4, 2022</p>
-        <p class="mb-0">cloudy</p>
-        <p class="mb-0">humdity: 100%</p>
-        <p class="mb-0">tempature: 90 F</p>
-        <p class="mb-0">wind: 5 mph</p>
-        
-    </div>
-    <br />
-    <div id="card1" class="border bg-secondary border-seccondary text-light rounded m-1 ml-0 p-2" >
-        <p class="mb-0">Thursday, August 4, 2022</p>
-        <p class="mb-0">cloudy</p>
-        <p class="mb-0">humdity: 100%</p>
-        <p class="mb-0">tempature: 90 F</p>
-        <p class="mb-0">wind: 5 mph</p>
-        
-    </div>
+     <!--forcast for day2-->
+<div id="2" class="card border bg-secondary border-seccondary text-light rounded m-2 ml-0">
+  <p id="date2">2</p>
+  <img src="" alt="" id="icon2Img"/>
+  <p id="temp2Max" class="mb-0"></p>
+  <p id="humidity2Level" class="mb-0"></p>
+  <p id="wind2Max" class="mb-0"></p>
+</div>
+    <!--forcast for day1-->
+<div id="1" class="card border bg-secondary border-seccondary text-light rounded m-2 ml-0">
+        <p id="date1">1</p>
+        <img src="" alt="" id="icon1Img"/>
+        <p id="temp1Max" class="mb-0"></p>
+        <p id="humidity1Level" class="mb-0"></p>
+        <p id="wind1Max" class="mb-0"></p>
+</div>
+ 
+ 
 
 </main>
    
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="weather-script.js" defer></script>
   </body>
