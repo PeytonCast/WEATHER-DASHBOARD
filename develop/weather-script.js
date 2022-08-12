@@ -1,4 +1,5 @@
-
+var currentDay = $('#cur-day');
+var m = moment()
 //CONNECTED TO REFRESH BTN
 var refresh = $('#refresh')
 //a button to update the time
@@ -29,7 +30,7 @@ var { speed } = data.wind;
 //var { uvi } = data.uvi  (uvi is no longer suported in 2.5)
 
 //displays the data from the api as an HTML element
-document.getElementById('city-name').innerText = name;
+document.getElementById('city-name').innerText = name + ",";
 document.getElementById('icon').src = "https://openweathermap.org/img/wn/" + icon + ".png"
 document.getElementById('discription').innerText = description;
 document.getElementById('Temp').innerText = 'Current temp is ' + temp + 'F°';
@@ -55,7 +56,7 @@ SearchResults: function() {
     //get data from search to add to search history
     var input = document.querySelector(".search-box").value
     arrayValue.push(input)
-    //arrayValue var is declared on line 120
+    //arrayValue var is declared on line 121
     localStorage.setItem('fruit', JSON.stringify(arrayValue))
     
     
@@ -109,7 +110,7 @@ var fiveDay = {
 document.querySelector(".search button").addEventListener('click', function() {
     weather.SearchResults() 
    fiveDay.SearchResults5d()
-    
+   currentDay.text(m.format('LL'))
 })
 
 
