@@ -14,6 +14,16 @@ input {
     padding: 1rem 10rem 4rem;
     text-align: left;
 }
-#card1 {
-    float: right;
+.parent{
+    position: relative;
+}
+.card {
+    position: absolute;
+    bottom: 0;
+    float: left;
+    padding: 1rem 1rem;
+    text-align: left;
+    display: flex;
+    
+
 }
