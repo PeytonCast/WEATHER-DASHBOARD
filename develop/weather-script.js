@@ -1,5 +1,6 @@
 var currentDay = $('#cur-day');
 var m = moment()
+var uvIndexElm =$('#uvi')
 //CONNECTED TO REFRESH BTN
 var refresh = $('#refresh')
 //a button to update the time
@@ -27,7 +28,8 @@ var { name } = data;
 var { icon, description } = data.weather[0];
 var { temp, humidity } = data.main;
 var { speed } = data.wind;
-//var { uvi } = data.uvi  (uvi is no longer suported in 2.5)
+var { lon } = data.coord;
+var { lat } = data.coord;
 
 //displays the data from the api as an HTML element
 document.getElementById('city-name').innerText = name + ",";
@@ -35,20 +37,29 @@ document.getElementById('icon').src = "https://openweathermap.org/img/wn/" + ico
 document.getElementById('discription').innerText = description;
 document.getElementById('Temp').innerText = 'Current temp is ' + temp + 'F°';
 document.getElementById('wind').innerText = 'Wind speed ' + speed + ' mph';
-//document.getElementById('uvi').innerText = 'UV index' + uvi; //(uvi is no longer suported in 2.5)
 document.getElementById('humidity').innerText = 'Humidity: ' + humidity + '%';
-
-//What i would have done if uvi was working-
-//if (uvi.value < 11 ) {
-//    document.getElementById('uvi').setAttribute('class', 'p-1 bg-danger text-white rounded' )
-//} else
-//if (uvi.value < 6 ) {
-//    document.getElementById('uvi').setAttribute('class', 'p-1 bg-warning text-white rounded' )
-//} else
-//if (uvi.value < 3 ) {
-//    document.getElementById('uvi').setAttribute('class', 'p-1 bg-success text-white rounded' )
-//}
+//get the uvi
+fetch ('https://api.openweathermap.org/data/3.0/onecall?lat=' + lat +'&lon=' +lon+ '&exclude=hourly,daily&appid=8736f1430041abf936f25448dbd98026')
+.then(response => response.json())
+.then(data => this.showUVI(data))},
+showUVI: function (data){
+    var { uvi } = data.current
+    console.log(uvi)
+    uvIndexElm.text('UV index: '+ uvi)
+//Uvi color coding
+if (uvi > 6 ) {
+    uvIndexElm.addClass('p-1 bg-danger text-white rounded' )
+    console.log('red')
+} else
+if (uvi > 2 ) {
+    uvIndexElm.addClass('p-1 bg-warning text-dark rounded')
+    console.log('yellow')
+} else{
+    uvIndexElm.addClass('p-1 bg-success text-white rounded' )
+    console.log('green')
+}
 },
+
 //valadates the content of the search box input
 SearchResults: function() {
     
