@@ -47,16 +47,30 @@ showUVI: function (data){
     console.log(uvi)
     uvIndexElm.text('UV index: '+ uvi)
 //Uvi color coding
-if (uvi > 6 ) {
-    uvIndexElm.addClass('p-1 bg-danger text-white rounded' )
-    console.log('red')
+if (uvi > 11 ) {
+    uvIndexElm.css("background-color","purple")
+    uvIndexElm.css("border-radius", "4px")
+    uvIndexElm.css("color", "white")
 } else
-if (uvi > 2 ) {
-    uvIndexElm.addClass('p-1 bg-warning text-dark rounded')
-    console.log('yellow')
+if (uvi > 8 ) {
+    uvIndexElm.css("background-color","red")
+    uvIndexElm.css("border-radius", "4px")
+    uvIndexElm.css("color", "white")
+} else
+if (uvi > 5 ) {
+    uvIndexElm.css("background-color","orange")
+    uvIndexElm.css("color", "black")
+    uvIndexElm.css("border-radius", "4px")
+} else if (uvi > 3){
+    uvIndexElm.css("background-color","yellow")
+    uvIndexElm.css("border-radius", "4px")
+    uvIndexElm.css("color", "white")
+
 } else{
-    uvIndexElm.addClass('p-1 bg-success text-white rounded' )
-    console.log('green')
+    uvIndexElm.css("background-color","green")
+    uvIndexElm.css("border-radius", "4px")
+    uvIndexElm.css("color", "white")
+
 }
 },
 
@@ -87,27 +101,27 @@ var fiveDay = {
             //Getting the values for windspeed, humidity, temp, and icon.
             //wind
             for(i = 0; i<5; i++){
-               document.getElementById("wind" + (i+1) + "Max").innerHTML = "Wind Speed: " + Number(data.list[i*8].wind.speed) + 'MPH';
+               document.getElementById("wind" + (i+1) + "Max").innerHTML = "Wind Speed: " + Number(data.list[1 + i*4].wind.speed) + 'MPH';
                 
            }
            //humidity
             for(i = 0; i<5; i++){
-                document.getElementById("humidity" + (i+1) + "Level").innerHTML = "Humidity: " + Number(data.list[i*8].main.humidity)+'%';
+                document.getElementById("humidity" + (i+1) + "Level").innerHTML = "Humidity: " + Number(data.list[i*4].main.humidity)+'%';
                
             }
            //temp
             for(i = 0; i<5; i++){
-                document.getElementById("temp" + (i+1) + "Max").innerHTML = "Temp: " + Number(data.list[i*8].main.temp) + "°";
+                document.getElementById("temp" + (i+1) + "Max").innerHTML = "Temp: " + Number(data.list[i*4].main.temp) + "°";
             }
         
             //Getting Weather Icons
              for(i = 0; i<5; i++){
                 document.getElementById("icon" + (i+1) + 'Img').setAttribute('width', '50px');
                 document.getElementById("icon" + (i+1) + 'Img').setAttribute('height', '50px');
-                document.getElementById("icon" + (i+1) + 'Img').src = "https://openweathermap.org/img/wn/" + data.list[i*8].weather[0].icon + ".png";
+                document.getElementById("icon" + (i+1) + 'Img').src = "https://openweathermap.org/img/wn/" + data.list[i*4].weather[0].icon + ".png";
             }
             for(i = 0; i<5; i++){
-                document.getElementById("date" + (i+1) ).innerHTML =  moment(data.list[i*8].dt*1000).format('dddd');
+                document.getElementById("date" + (i+1) ).innerHTML =  moment(data.list[i*4].dt*2000).format('dddd');
             }
     },
     SearchResults5d: function() {
