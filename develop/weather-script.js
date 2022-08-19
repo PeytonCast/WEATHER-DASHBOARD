@@ -64,7 +64,7 @@ if (uvi > 5 ) {
 } else if (uvi > 3){
     uvIndexElm.css("background-color","yellow")
     uvIndexElm.css("border-radius", "4px")
-    uvIndexElm.css("color", "white")
+    uvIndexElm.css("color", "black")
 
 } else{
     uvIndexElm.css("background-color","green")
